@@ -1,11 +1,6 @@
 import sys
 
-lst = []
-N = 9
-while N:
-    n = int(sys.stdin.readline().strip())
-    lst.append(n)
-    N -= 1
+arr = list(map(int, sys.stdin.read().split()))
 
-print(max(lst))
-print(lst.index(max(lst))+1)
+print(max(arr))
+print(arr.index(max(arr)) + 1)

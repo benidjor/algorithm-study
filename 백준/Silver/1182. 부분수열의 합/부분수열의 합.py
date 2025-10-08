@@ -8,12 +8,9 @@ numbers = list(map(int, input().split()))
 
 cnt = 0
 for i in range(1, N+1):
-    nCr = list(combinations(numbers, i))
-    # print(f"{i}: {nCr}")
-    # print(sum(nCr))
+    nCr = combinations(numbers, i)
     
     for combination in nCr:
-        # print(sum(combination))
 
         if sum(combination) == S:
             cnt += 1

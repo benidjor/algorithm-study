@@ -17,8 +17,6 @@ def cutting(length, cookies):
     
     return slices
 
-# print(cutting(7, cookies))
-
 def parametic_binary_search(array, target, start, end):
     # 조카들에게 나눠줄 과자가 없다면 0을 출력
     result = 0
@@ -33,6 +31,9 @@ def parametic_binary_search(array, target, start, end):
             # mid 길이를 줄여야 한다 (왼쪽 탐색) 
             end = mid - 1
         else:
+            # mid 길이로 주어도 M명에게 줄 수 있음 (성공)
+            # 더 긴 길이도 가능한지 탐색하기 위해 start를 늘리고,
+            # result에 현재 가능한 길이(mid)를 저장
             result = mid
             start = mid + 1
     
@@ -43,7 +44,3 @@ start = 1
 end = max(cookies)
 
 print(parametic_binary_search(cookies, M, start, end))
-
-
-
-

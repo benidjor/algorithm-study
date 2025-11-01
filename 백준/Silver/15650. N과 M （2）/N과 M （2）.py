@@ -1,13 +1,25 @@
+
 import sys
-from itertools import combinations
 
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
 
-numbers = list(range(1, N+1))
+result = []
 
-NCM = list(combinations(numbers, M))
+def backtracking(start):
+    if len(result) == M:
+        print(*result)
+        return
+    
+    for i in range(start, N+1):
 
-for combination in NCM:
-    print(" ".join(map(str, combination)))
+        result.append(i)
+
+        backtracking(i+1)
+
+        result.pop()
+
+
+backtracking(1)
+

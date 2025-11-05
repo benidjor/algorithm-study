@@ -13,26 +13,23 @@ for i in range(1, N+1):
         if i == j:
             graph[i][j] = 0
 
+# a,b가 친구라면 graph에서 1로 처리
 for _ in range(M):
     a, b = map(int, input().split())
     graph[a][b] = 1
     graph[b][a] = 1
 
-# for g in graph:
-#     print(g)
 
+# 플로이드 워셜 알고리즘 수행하여, a, k, b 중 최단 거리 구한다
 for k in range(1, N+1):
     for a in range(1, N+1):
         for b in range(1, N+1):
             graph[a][b] = min(graph[a][b], graph[a][k]+graph[k][b])
 
-# for g in graph:
-#     print(g)
-
-# row_sums = [sum([value for value in row if value != float("inf")]) for row in graph]
-
+# inf로 초기화 했던 값을 제거한 배열을 result로 선언
 result = [row[1:] for row in graph[1:]]
+
+# 각 행별로 값들을 더하여 유저별 케빈 베이컨 수를 구한다
 row_sums = [sum(row) for row in result]
 
-# print(row_sums)
 print(row_sums.index(min(row_sums))+1)

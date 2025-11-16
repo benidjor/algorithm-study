@@ -6,19 +6,16 @@ N = int(input())
 roads_length = list(map(int, input().split()))
 prices = list(map(int, input().split()))
 
-total_length = sum(roads_length)
+min_price = prices[0]
 
-prices.pop()
+total_sum = 0
 
 
-cur_sum = 0
-for price, length in list(zip(prices, roads_length)):
-    if price == min(prices):
-        cur_sum += price * (total_length)
-        break
-    else:
-        cur_sum += price * length
+for i in range(N-1):
+  
+    if prices[i] < min_price:
+        min_price = prices[i]
+    
+    total_sum += min_price * roads_length[i]
 
-    total_length -= length
-
-print(cur_sum)
+print(total_sum)

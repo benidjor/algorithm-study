@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 32412 KB, 시간: 132 ms
+메모리: 32412 KB, 시간: 108 ms
 
 ### 분류
 
@@ -12,11 +12,11 @@
 
 ### 제출 일자
 
-2025년 11월 18일 20:47:41
+2025년 11월 23일 23:42:45
 
 ### 문제 설명
 
-<p><img alt="" src="https://www.acmicpc.net/upload/images/nOrutAPEPgnrupqCSJstXcV6ymw.gif" style="width: 214px; height: 210px; "></p>
+<p><img alt="" src="" style="width: 214px; height: 210px; "></p>
 
 <p>위와 같은 십자모양의 한 장의 카드에서, 네 모서리에 1 이상 9 이하의 숫자가 하나씩 씌여 있다. 이 네 개의 숫자 중에는 같은 숫자도 있을 수 있다.</p>
 
@@ -26,7 +26,7 @@
 
 <p>예를 들어서, 다음과 같은 십자 카드의 시계수는 1122이며, 이 시계수보다 작은 시계수들은 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119 뿐이므로 1122는 10번째로 작은 시계수다. (여기서 십자카드는 0 이 나타날 수 없으므로 1120은 시계수가 될 수 없다. 또한 1121 이 적혀있는 카드의 시계수는 1112이므로, 1121은 시계수가 될 수 없다.</p>
 
-<p><img alt="" src="https://www.acmicpc.net/upload/images/LZTeAvxa9Shzs4Y1CI.gif" style="width: 214px; height: 210px; "></p>
+<p><img alt="" src="" style="width: 214px; height: 210px; "></p>
 
 ### 입력 
 
